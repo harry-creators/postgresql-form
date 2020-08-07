@@ -22,7 +22,7 @@ li {listt-style: none;}
 </body>
 </html>
 <?php
-$db = pg_connect("host=localhost port=5432 dbname=postgres user=admin password='' ");
+$db = pg_connect("host=ec2-23-20-168-40.compute-1.amazonaws.com port=5432 dbname=daefnrh6o0a4r2 user=fbcyaxkaibfbes password=14da2692ba3eab355550fe8d05b407b05fa9cfcadd6211e4579a3264d5bcf77a ");
 
 if(isset($_POST['submit']))
 {
