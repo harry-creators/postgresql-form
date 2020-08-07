@@ -9,12 +9,11 @@ li {listt-style: none;}
 <body>
 <h2>Enter information regarding book</h2>
 <ul>
-<form name="insert" action="insert.php" method="POST" >
+<form name="insert" method="POST" >
 <li>Book ID:</li><li><input type="text" name="bookid" /></li>
 <li>Book Name:</li><li><input type="text" name="book_name" /></li>
 <li>Author:</li><li><input type="text" name="author" /></li>
 <li>Publisher:</li><li><input type="text" name="publisher" /></li>
-<li>Date of publication:</li><li><input type="text" name="dop" /></li>
 <li>Price (USD):</li><li><input type="text" name="price" /></li>
 <li><button type="button"  name="submit"> SUBMIT </button></li>
 </form>
@@ -27,8 +26,7 @@ $db = pg_connect("host=ec2-23-20-168-40.compute-1.amazonaws.com port=5432 dbname
 if(isset($_POST['submit']))
 {
 	$query = "INSERT INTO book VALUES ('$_POST[bookid]','$_POST[book_name]',
-	'$_POST[author]','$_POST[publisher]','$_POST[dop]',
-	'$_POST[price]')";
+	'$_POST[author]','$_POST[publisher]','$_POST[price]')";
 	$result = pg_query($query); 
 }
 ?>
